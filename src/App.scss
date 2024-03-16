@@ -1,0 +1,146 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.app {
+  background: #fff;
+  color: #222;
+  padding: 0 15px;
+  margin: auto;
+  min-height: 100vh;
+}
+.app.dark {
+  background: #030712;
+  color: #fff;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background: #eee;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+.header ul{
+  display: flex;
+  align-items: center;
+  list-style: none;
+}
+.header ul li {
+  padding: 10px;
+}
+a.active {
+  background: red;
+  color: #fff;
+  padding: 5px;
+  margin: 10px;
+}
+
+.btn-change-theme {
+  background: #eee;
+  padding: 10px;
+  border: 0;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.list-product {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: flex-start;
+  .card {
+    width: calc(25% - 12px);
+    background: #eee;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: all .3s;
+    cursor: pointer;
+    color: #030712;
+    &:hover {
+      scale: 1.03;
+      transition: all .3s;
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    }
+    .dark & {
+      background: #4B5563;
+    }
+    img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+    .description {
+      padding: 10px;
+    }
+  }
+}
+.detail-product {
+  display: flex;
+  gap: 10px;
+  padding: 10px;
+  figure {
+    width: 50%;
+    height: 400px;
+    overflow: hidden;
+    border: 1px solid #1f2937;
+    border-radius: 5px;
+    img {
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+  h3 {
+    margin-bottom: 20px;
+  }
+  p {
+    margin-bottom: 10px;
+  }
+  strong {
+    color: red;
+  }
+}
+.cart {
+  padding: 20px;
+  ul {
+      li {
+        display: flex;
+        align-items: center;
+        border: 1px solid;
+        padding: 10px;
+        margin-bottom: 10px;
+        figure {
+          width: 50px;
+          height: 50px;
+          margin-right: 10px;
+          img {
+            width: 100%;
+            height: inherit;
+            object-fit: cover;
+          }
+        }
+      }
+  }
+}
+.form-login {
+  padding: 20px;
+  border: 1px solid;
+  max-width: 500px;
+  margin: 100px auto;
+  h1 {
+    text-align: center;
+    padding: 5px;
+    background: #eee;
+    margin-bottom: 10px;
+  }
+  input {
+    width: 100%;
+    padding: 5px 10px;
+    margin-bottom: 10px;
+  }
+}
